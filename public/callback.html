@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Redirect</title>
+</head>
+<body>
+  <h2>✅ Spotify Authorization Complete</h2>
+  <p>You may now close this window.</p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+
+    if (code) {
+      console.log("Spotify Auth Code:", code);
+    } else {
+      document.body.innerHTML = "<h2>❌ No code found.</h2><p>Try again.</p>";
+    }
+  </script>
+</body>
+</html>
 
